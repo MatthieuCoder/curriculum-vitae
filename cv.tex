@@ -1,0 +1,162 @@
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+
+\documentclass[10pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+\usepackage{setspace}
+\usepackage{progressbar}
+\usepackage{grid-system}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{000080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\usepackage[colorlinks=false,pdftitle={Pignolet Matthieu}]{hyperref}
+
+\begin{document}
+
+\name{Pignolet Matthieu}
+\tagline{}
+% \photo{2.8cm}{Globe_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\href{mailto:matthieu@matthieu-dev.xyz}{matthieu@matthieu-dev.xyz}}
+  \email{\href{mailto:m.pignolet@rt-iut.re}{m.pignolet@rt-iut.re}}
+  \phone{(+262) 693 47 03 81}
+  \mailaddress{6, Impasse Bois de Tan Rouge, Le Tampon}
+  \location{La Réunion, France}
+  \homepage{\href{http://www.matthieu-dev.xyz}{matthieu-dev.xyz}}
+  \linkedin{\href{http://www.linkedin.com/in/matthieu-pignolet-8a8971259/}{Matthieu Pignolet}}
+   \github{\href{http://github.com/MatthieuCoder}{@MatthieuCoder}} % I'm just making this up though.
+
+}
+
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+Passionné, Technique, Dévelopeur
+
+\AtBeginEnvironment{itemize}{\small}
+
+\cvsection[sidebar]{Expérience}
+
+\cvevent{Stage à WebCup Campus}{Observation en milieu profesionnel}{August 2019 -- October 2019}{Saint-Pierre}{
+  \begin{itemize}
+    \item Mise en place d'un serveur web pour les utilisateurs 
+    \item Assistance aux personnes n'ayant pas d'expérience avec la technologie
+  \end{itemize}
+}
+
+\divider{}
+
+\cvevent{Developer's House}{Projet associatif entre amis}{August 2019 -- October 2022}{}{
+  \begin{itemize}
+    \item Mise en place de cluster Kubernetes sur bare-metal
+    \item Introduction aux technologies cloud-native
+    \item Déploiement de stockage et de loadbalancing grâce à CloudFlare
+    \item Dévelopement d'une plateforme d'authentification SSO
+  \end{itemize}
+}
+
+\cvsection{Projets}
+
+\cvevent{Nova}{Projet personnel}{October 2022 -- Présent}{}{
+  \smallskip
+  \small{
+    Framework pour la création d'applicatifs ("Bots") au sein de la plateforme discord qui 
+    assure la fiabilité de l'applicatig grâce à des brokers et du loadbalancing au sein de 
+    Kubernetes pour permettre la mise à jour de l'applicatif avec aucune période de non-disponibilité.
+  }
+  \smallskip
+  \begin{itemize}
+    \item Conteneurisation docker multi-architecture (amd64 / arm).
+    \item Dévelopement en Rust et Go
+    \item Utilisation du broker NATS
+    \item Déploiement sur Kubernetes
+    
+  \end{itemize}
+}
+
+\divider{}
+
+\cvevent{Timothé-rs}{Projet personnel}{Octobre 2021 -- Présent}{}{
+  \smallskip
+  \small{
+    Système de suivi d'emploi du temps pour avertir les elèves d'éventuels changements
+  }
+  \smallskip
+  \begin{itemize}
+      \item Utilisation de Rust pour le parsing de fichiers .ics
+      \item Déploiement dans Kubernetes au sein d'un cloud
+  \end{itemize}
+}
+
+\divider{}
+
+\cvevent{libmatpgn}{IUT de la Réunion}{Avril 2023 - Mai 2023}{Saint-Pierre}{
+  \smallskip
+  \small{
+    Librarie utilisée pour parser les fichiers .pgn au sein de la ressource "Analyse et traitement de données structurées" de mon BUT R\&T.
+  }
+}
+
+\divider{}
+
+\cvevent{Kuizz}{Projet personnel}{}{}{
+  \smallskip
+  \small{
+    Application mobile présentant un flux infini de questions de culture générale.
+  }
+  \smallskip
+  \begin{itemize}
+      \item Utilisation de Flutter de de gRPC et Rust pour un serveur de jeu
+  \end{itemize}
+}
+
+\clearpage
+\end{document}
