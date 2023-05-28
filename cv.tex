@@ -1,34 +1,8 @@
-\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
-%% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons 
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
-
 \documentclass[10pt,a4paper]{altacv}
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages. 
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
-%% 
-%% Compile with LuaLaTeX for best results. If you
-%% want to use XeLaTeX, you may need to install
-%% Academicons.ttf in your operating system's font 
-%% folder.
-
-
-% Change the page layout if you need to
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
 
-% Change the font if you want to.
-
-% If using pdflatex:
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[default]{lato}
@@ -36,11 +10,7 @@
 \usepackage{progressbar}
 \usepackage{grid-system}
 
-% If using xelatex or lualatex:
-% \setmainfont{Lato}
-
-% Change the colours if you want to
-\definecolor{Navy}{HTML}{000080}
+\definecolor{Navy}{HTML}{000090}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
 \colorlet{heading}{Navy}
@@ -85,7 +55,7 @@ Passionné, Technique, Dévelopeur
 
 \cvsection[sidebar]{Expérience}
 
-\cvevent{Stage à WebCup Campus}{Observation en milieu profesionnel}{August 2019 -- October 2019}{Saint-Pierre}{
+\cvevent{Stage à WebCup Campus}{Observation en milieu profesionnel}{2018}{Saint-Pierre}{
   \begin{itemize}
     \item Mise en place d'un serveur web pour les utilisateurs 
     \item Assistance aux personnes n'ayant pas d'expérience avec la technologie
@@ -94,7 +64,7 @@ Passionné, Technique, Dévelopeur
 
 \divider{}
 
-\cvevent{Developer's House}{Projet associatif entre amis}{August 2019 -- October 2022}{}{
+\cvevent{Developer's House}{Projet associatif entre amis}{Aout 2019 -- Décembre 2023}{}{
   \begin{itemize}
     \item Mise en place de cluster Kubernetes sur bare-metal
     \item Introduction aux technologies cloud-native
@@ -105,11 +75,11 @@ Passionné, Technique, Dévelopeur
 
 \cvsection{Projets}
 
-\cvevent{Nova}{Projet personnel}{October 2022 -- Présent}{}{
+\cvevent{Nova}{Projet personnel}{Octobre 2022 -- Présent}{}{
   \smallskip
   \small{
     Framework pour la création d'applicatifs ("Bots") au sein de la plateforme discord qui 
-    assure la fiabilité de l'applicatig grâce à des brokers et du loadbalancing au sein de 
+    assure la fiabilité de l'application grâce à des brokers et du loadbalancing au sein de 
     Kubernetes pour permettre la mise à jour de l'applicatif avec aucune période de non-disponibilité.
   }
   \smallskip
@@ -147,7 +117,7 @@ Passionné, Technique, Dévelopeur
 
 \divider{}
 
-\cvevent{Kuizz}{Projet personnel}{}{}{
+\cvevent{Kuizz}{Projet personnel}{Aout 2020 -- Présent}{}{
   \smallskip
   \small{
     Application mobile présentant un flux infini de questions de culture générale.
