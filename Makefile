@@ -1,4 +1,4 @@
-pdf/cv.pdf: cv.tex page1sidebar.tex
+pdf/cv.pdf: cv.tex sidebar.tex
 	@mkdir -p pdf
 	@cp *.{tex,cls} pdf
 	cd pdf && pdflatex cv.tex
