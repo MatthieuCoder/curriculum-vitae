@@ -314,7 +314,7 @@ TSWLatexianTemp*
 # End of https://www.toptal.com/developers/gitignore/api/latex
 
 #html/
-pdf/
-pdf/*.tex
+
+pdf/*
 cv.pdf
 !pdf/*.pdf
