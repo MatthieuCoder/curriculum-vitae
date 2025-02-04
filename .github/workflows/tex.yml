@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     name: "Build LaTeX"
     container:
-      image: thomasweise/texlive
+      image: leplusorg/latex:12-debian
     steps:
+      - uses: actions/checkout@v4
       - name: Build
         run: make pdf/cv.pdf
       - name: Archive production artifacts
