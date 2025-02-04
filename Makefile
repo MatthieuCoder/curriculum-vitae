@@ -1,7 +1,7 @@
-pdf/cv.pdf: cv.tex sidebar.tex
+pdf/cv.pdf: cv.tex
 	@mkdir -p pdf
 	@cp *.{tex,cls} pdf
-	cd pdf && pdflatex cv.tex
+	cd pdf && xelatex cv.tex
 
 html/cv.html: pdf/cv.pdf
 	@mkdir -p html

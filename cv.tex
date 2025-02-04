@@ -1,130 +1,111 @@
-\PassOptionsToPackage{dvipsnames}{xcolor}
-
-\documentclass[10pt,a4paper]{altacv}
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
-
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[default]{lato}
-\usepackage{setspace}
-\usepackage{progressbar}
-\usepackage{grid-system}
-
-\definecolor{Navy}{HTML}{000090}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{heading}{Navy}
-\colorlet{accent}{Navy}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
 
-\usepackage[colorlinks=false,pdftitle={Pignolet Matthieu},hidelinks]{hyperref}
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
+\name{Claud D.}{Park}
+\position{Site Reliability Engineer{\enskip\cdotp\enskip}Software Architect}
+\address{235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea}
+
+\mobile{(+82) 10-9030-1843}
+\email{posquit0.bj@gmail.com}
+%\dateofbirth{January 1st, 1970}
+\homepage{www.posquit0.com}
+\github{posquit0}
+\linkedin{posquit0}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{medium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
-\name{Matthieu Pignolet}
-\tagline{}
-% \photo{2.8cm}{Globe_High}
-\personalinfo{%
-  % Not all of these are required!
-  % You can add your own with \printinfo{symbol}{detail}
-  \email{\href{mailto:matthieu@matthieu-dev.xyz}{matthieu@matthieu-dev.xyz}}
-  \email{\href{mailto:m.pignolet@rt-iut.re}{m.pignolet@rt-iut.re}}
-  \phone{(+262) 693 47 03 81}
-  \mailaddress{6, Impasse Bois de Tan Rouge, Le Tampon}
-  \location{La Réunion, France}
-  \homepage{\href{http://www.matthieu-dev.xyz}{matthieu-dev.xyz}}
-  \linkedin{\href{http://www.linkedin.com/in/matthieu-pignolet-8a8971259/}{Matthieu Pignolet}}
-   \github{\href{http://github.com/MatthieuCoder}{@MatthieuCoder}} % I'm just making this up though.
-
-}
-
-\begin{fullwidth}
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader
-\end{fullwidth}
 
-\AtBeginEnvironment{itemize}{\small}
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Claud D. Park~~~·~~~Curriculum Vitae}
+  {\thepage}
 
-\cvsection[sidebar]{Expérience}
 
-\cvevent{Developer's House}{Projet associatif entre amis}{Aout 2019 -- Décembre 2022}{}{
-  \begin{itemize}
-    \item Mise en place de cluster Kubernetes sur bare-metal
-    \item Introduction aux technologies Cloud-native
-    \item Déploiement de stockage et de loadbalancing grâce à Cloudflare
-    \item Développement d'une plateforme d'authentification SSO
-  \end{itemize}
-}
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{cv/education.tex}
+\input{cv/skills.tex}
+\input{cv/experience.tex}
+\input{cv/extracurricular.tex}
+\input{cv/honors.tex}
+\input{cv/certificates.tex}
+\input{cv/presentation.tex}
+\input{cv/writing.tex}
+\input{cv/committees.tex}
 
-\divider{}
 
-\cvevent{Stage à WebCup Campus}{Observation en milieu professionnel}{Novembre 2018}{}{
-  \begin{itemize}
-    \item Mise en place d'un serveur Web pour les utilisateurs 
-    \item Assistance aux personnes n'ayant pas d'expérience avec le numérique
-  \end{itemize}
-}
-
-\cvsection{Projets}
-
-\cvevent{libmatpgn}{IUT de la Réunion}{Avril 2023 - Mai 2023}{}{
-  \smallskip
-  \small{
-    Librairie utilisée pour parser les fichiers .pgn au sein de la ressource "Analyse et traitement de données structurées" de mon BUT R\&T.
-  }
-}
-
-\divider{}
-
-\cvevent{Nova}{Projet personnel}{Octobre 2022 -- Présent}{}{
-  \smallskip
-  \small{
-    Framework pour la création d'applicatifs ("Bots") au sein de la plateforme Discord qui 
-    assure la fiabilité de l'application grâce à des brokers et du loadbalancing au sein de 
-    Kubernetes pour permettre la mise à jour de l'applicatif sans aucune période de non-disponibilité.
-  }
-  \smallskip
-  \begin{itemize}
-    \item Conteneurisation Docker multi-architecture (amd64 / arm)
-    \item Développement en Rust et Go
-    \item Utilisation du broker NATS
-    \item Déploiement sur Kubernetes
-    
-  \end{itemize}
-}
-
-\divider{}
-
-\cvevent{Timothé-rs}{Projet personnel}{Octobre 2021 -- Présent}{}{
-  \smallskip
-  \small{
-    Système de suivi d'emploi du temps pour avertir les elèves d'éventuels changements
-  }
-  \smallskip
-  \begin{itemize}
-      \item Utilisation de Rust pour le parsing de fichiers .ics
-      \item Déploiement dans Kubernetes au sein d'un cloud
-  \end{itemize}
-}
-
-\divider{}
-\cvevent{Kuizz}{Projet personnel}{Aout 2020 -- Présent}{}{
-  \smallskip
-  \small{
-    Application mobile présentant un flux infini de questions de culture générale.
-  }
-  \smallskip
-  \begin{itemize}
-      \item Utilisation de Flutter de gRPC et Rust pour un serveur de jeu
-      \item Découverte de la plateforme Google Play
-    \end{itemize}
-}
-
-\clearpage
+%-------------------------------------------------------------------------------
 \end{document}
