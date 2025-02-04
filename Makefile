@@ -5,4 +5,4 @@ pdf/cv.pdf: cv.tex
 
 .PHONY: clean
 clean:
-	rm -rf ./{pdf}
+	rm -rf ./pdf

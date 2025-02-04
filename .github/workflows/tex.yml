@@ -10,8 +10,9 @@ jobs:
   tex:
     runs-on: ubuntu-latest
     name: "Build LaTeX"
+    container:
+      image: thomasweise/texlive
     steps:
-      - run: sudo apt-get update && sudo apt-get install -y texlive-full
       - name: Build
         run: make pdf/cv.pdf
       - name: Archive production artifacts
