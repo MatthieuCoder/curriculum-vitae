@@ -1,0 +1,22 @@
+name: LaTeX build
+
+on:
+  schedule:
+    - cron: '21 15 * * *'
+  push:
+  pull_request:
+
+jobs:
+  tex:
+    runs-on: ubuntu-latest
+    name: "Build LaTeX"
+    steps:
+      - run: apt-get update && apt-get install -y texlive-full
+      - name: Build
+        run: make pdf/cv.pdf
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-without-markdown
+          path: |
+            pdf/cv.pdf
