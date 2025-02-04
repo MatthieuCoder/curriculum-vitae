@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "Build LaTeX"
     steps:
-      - run: apt-get update && apt-get install -y texlive-full
+      - run: sudo apt-get update && sudo apt-get install -y texlive-full
       - name: Build
         run: make pdf/cv.pdf
       - name: Archive production artifacts
