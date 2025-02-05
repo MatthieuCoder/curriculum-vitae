@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "Build LaTeX"
     container:
-      image: pandoc/latex:latest-alpine
+      image: leplusorg/latex
       options: --user root
     steps:
       - uses: actions/checkout@v4
