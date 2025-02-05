@@ -14,10 +14,8 @@ jobs:
       image: leplusorg/latex:12-debian
     steps:
       - uses: actions/checkout@v4
-      - name: Build
-        run: make pdf/cv.pdf
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v4
+      - run: make pdf/cv.pdf
+      - uses: actions/upload-artifact@v4
         with:
           path: |
             pdf/cv.pdf
