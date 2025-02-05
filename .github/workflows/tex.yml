@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: "Build LaTeX"
     container:
-      image: leplusorg/latex:12-debian
+      image: blang/latex:ubuntu
+      options: --user root
     steps:
       - uses: actions/checkout@v4
       - run: make pdf/cv.pdf
