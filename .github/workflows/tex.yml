@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     name: "Build LaTeX"
     container:
-      image: pandoc/latex
+      image: pandoc/latex:latest-alpine
       options: --user root
     steps:
       - uses: actions/checkout@v4
+      - run: apk add make
       - run: make pdf/cv.pdf
       - uses: actions/upload-artifact@v4
         with:
