@@ -1,9 +1,6 @@
-pdf/cv.pdf: cv.tex
-	@mkdir -p pdf
-	@cp *.{tex,cls} pdf
-	@cp -r cv pdf
-	cd pdf && xelatex cv.tex
+cv.pdf: cv.tex
+	xelatex cv.tex
 
 .PHONY: clean
 clean:
-	rm -rf ./pdf
+	rm -rf cv.{aux,log,pdf}

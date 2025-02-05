@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: apk add make
-      - run: make pdf/cv.pdf
+      - run: make cv.pdf
       - uses: actions/upload-artifact@v4
         with:
           path: |
-            pdf/cv.pdf
+            cv.pdf
