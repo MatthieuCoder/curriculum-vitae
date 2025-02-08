@@ -1,4 +1,6 @@
+
 \documentclass[11pt, a4paper]{awesome-cv}
+\usepackage{seqsplit}
 
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
@@ -12,25 +14,25 @@
 \position{Administrateur Réseaux}
 \mobile{(+262) 693 47 03 81}
 \email{m@mpgn.dev}
+\email{m.pignolet@rt-iut.re}
 \homepage{mpgn.dev}
 \github{MatthieuCoder}
 \linkedin{mpgn}
-\mastodon{puffer.fish}{matthieu}
-
+\mastodon{mastodon.puffer.fish}{matthieu@puffer.fish}
 \quote{``L'informatique est ma passion, l'innovation est mon moteur, la solution est ma spécialité."}
-
 
 \begin{document}
 \makecvheader
 
 \makecvfooter
   {\today}
-  {Matthieu Pignolet ~~~·~~~ Curriculum Vitae}
+  {Matthieu Pignolet ~~~·~~~ \href{https://github.com/MatthieuCoder/curriculum-vitae.git}{\faGithubSquare\acvHeaderIconSep Curriculum Vitae}}
   {\thepage}
 
 \input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/personal.tex}
 \input{cv/experience.tex}
+\input{cv/personal.tex}
+\pagebreak
+\input{cv/skills.tex}
 
 \end{document}

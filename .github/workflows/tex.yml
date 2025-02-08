@@ -19,5 +19,4 @@ jobs:
       - run: make cv.pdf
       - uses: actions/upload-artifact@v4
         with:
-          path: |
-            cv.pdf
+          path: cv.pdf
