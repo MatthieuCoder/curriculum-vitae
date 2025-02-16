@@ -1,16 +1,34 @@
 \cvsection{Projets personnels}
 
 \begin{cventries}
-
   \cventry
-    {spécialité ``Cybersécurité''}
-    {BUT en Réseaux \& Télécommunications}
-    {IUT de Saint Pierre}
-    {2025}
+    {Solution de SD-WAN open-source basée sur Wireguard et FRR}
+    {Projet ``Orion''}
+    {}
+    {2020-Actuel}
     {
       \begin{cvitems}
-        \item {En alternance au sein de la société locale ``Exodata'' fournissant de nombreux services tel que l'infogérance, milieu ou j'ai eu l'occasion de travailler}
+        \item {Système de ``SD-wan'' inter-étudiant utilisant BGP et Wireguard pour assurer une redoncance,
+        de nombreux services sont disponibles au sein du réseau (Relais SIP, zones DNS publiques, serveurs SMTP avec relais), 
+        }
+        \item {Utilisation de la technologie de VPN Wireguard}
+        \item {Implémentation de techniques de hole-punching pour les liaisons derrière des NATs}
+        \item {Mise en place d'authentification par certificat (mTLS) au serveur de signalisation}
+        \item {Système de génération de règles de nat par nftables dévelopé}
+        \item {Génération de configuration BGP pour \href{https://github.com/FRRouting/frr.git}{FRR} et systèmes de rpc via gRPC et Websocket}
       \end{cvitems}
     }
 
+  \cventry
+    {Système d'édition d'images par webgl}
+    {Projet ``nsi-image-editor''}
+    {Projet de fin d'année pour la spécialité NSI}
+    {2020-Actuel}
+    {
+      \begin{cvitems}
+        \item {Introduction aux systèmes de shader de fragments et de vertex} 
+        \item {Introduction a des APIs graphiques utilisées au sein du web}
+        \item {Déploiement sur un bucket AWS \href{https://cdn.mpgn.dev/image-editor/index.html}{cdn.mpgn.dev/image-editor/index.html}}
+      \end{cvitems}
+    }
 \end{cventries}
