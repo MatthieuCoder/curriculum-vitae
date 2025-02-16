@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: '21 15 * * *'
   push:
-  pull_request:
 
 jobs:
   tex:
