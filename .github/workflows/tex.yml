@@ -1,0 +1,21 @@
+name: LaTeX build
+
+on:
+  schedule:
+    - cron: '21 15 * * *'
+  push:
+
+jobs:
+  tex:
+    runs-on: ubuntu-latest
+    name: "Build LaTeX"
+    container:
+      image: leplusorg/latex:autobuild-alpine
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4
+      - run: apk add make
+      - run: make cv.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          path: cv.pdf
