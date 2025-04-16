@@ -30,28 +30,35 @@
 
 \name{Matthieu Pignolet}
 \tagline{}
-% \photo{2.8cm}{Globe_High}
-\personalinfo{%
-  % Not all of these are required!
-  % You can add your own with \printinfo{symbol}{detail}
-  \email{\href{mailto:matthieu@matthieu-dev.xyz}{matthieu@matthieu-dev.xyz}}
+\personalinfo{
+  \email{\href{mailto:m@mpgn.dev}{m@mpgn.dev}}
   \email{\href{mailto:m.pignolet@rt-iut.re}{m.pignolet@rt-iut.re}}
   \phone{(+262) 693 47 03 81}
-  \mailaddress{6, Impasse Bois de Tan Rouge, Le Tampon}
-  \location{La Réunion, France}
-  \homepage{\href{http://www.matthieu-dev.xyz}{matthieu-dev.xyz}}
-  \linkedin{\href{http://www.linkedin.com/in/matthieu-pignolet-8a8971259/}{Matthieu Pignolet}}
-   \github{\href{http://github.com/MatthieuCoder}{@MatthieuCoder}} % I'm just making this up though.
-
+  \homepage{\href{http://puffer.fish/~matthieu}{puffer.fish/\~{}matthieu}}
+  \linkedin{\href{https://www.linkedin.com/in/mpgn/}{Matthieu Pignolet}}
+   \github{\href{http://github.com/MatthieuCoder}{@MatthieuCoder}}
 }
 
 \begin{fullwidth}
 \makecvheader
 \end{fullwidth}
 
-\AtBeginEnvironment{itemize}{\small}
-
 \cvsection[sidebar]{Expérience}
+
+\cvevent{Exodata}{Alternance durant un BUT R\&T}{Octobre 2023 - Octobre 2024}{}{
+  \begin{itemize}
+    \item{Développement d'un framework python dans le cadre de systèmes de vérifications et de supervision}
+    \item{Développement de systèmes d'intégration continue et de tests continus}
+    \item{
+     Développement de plusieurs systèmes de vérifications contenant au moins: \\
+     \t  * Vérifications de conformité de la réplication dans le cadre de plans de reprise d'activité \\
+     \t  * Indexation de systèmes de pare-feu et leurs règles de filtre pour vérifications centralisées \\
+     \t  * Vérifications de conformité au sein de plate-formes d'antivirus vendues aux clients
+     }
+    \item{Développement de système d'indéxation et de stockage de licenses au sein de l'ecosystème Microsoft pour assurer la visibilité}
+    \item{Mise en place d'infrastructure basées sur Ansible AWX}
+  \end{itemize}
+}
 
 \cvevent{Developer's House}{Projet associatif entre amis}{Aout 2019 -- Décembre 2022}{}{
   \begin{itemize}
@@ -62,68 +69,22 @@
   \end{itemize}
 }
 
-\divider{}
-
-\cvevent{Stage à WebCup Campus}{Observation en milieu professionnel}{Novembre 2018}{}{
-  \begin{itemize}
-    \item Mise en place d'un serveur Web pour les utilisateurs 
-    \item Assistance aux personnes n'ayant pas d'expérience avec le numérique
-  \end{itemize}
-}
-
 \cvsection{Projets}
 
-\cvevent{libmatpgn}{IUT de la Réunion}{Avril 2023 - Mai 2023}{}{
-  \smallskip
-  \small{
-    Librairie utilisée pour parser les fichiers .pgn au sein de la ressource "Analyse et traitement de données structurées" de mon BUT R\&T.
-  }
-}
-
-\divider{}
-
-\cvevent{Nova}{Projet personnel}{Octobre 2022 -- Présent}{}{
-  \smallskip
-  \small{
-    Framework pour la création d'applicatifs ("Bots") au sein de la plateforme Discord qui 
-    assure la fiabilité de l'application grâce à des brokers et du loadbalancing au sein de 
-    Kubernetes pour permettre la mise à jour de l'applicatif sans aucune période de non-disponibilité.
-  }
-  \smallskip
+\cvevent{Orion}{Solution de sd-wan open-source basée sur Wireguard et FRR (BGP)}{2020 - Actuel}{}{
   \begin{itemize}
-    \item Conteneurisation Docker multi-architecture (amd64 / arm)
-    \item Développement en Rust et Go
-    \item Utilisation du broker NATS
-    \item Déploiement sur Kubernetes
-    
+    \item {Système de ``SD-wan'' inter-étudiant utilisant BGP et Wireguard pour assurer une redoncdance}
+    \item{Mise en place de nombreux services disponibles au sein du réseau (Relais SIP, zones DNS publiques, serveurs SMTP avec relais)}
+    \item {Utilisation de la technologie de VPN Wireguard}
+    \item {Implémentation de techniques de hole-punching pour les liaisons derrière des NATs}
+    \item {Mise en place d'authentification par certificat (mTLS) au serveur de signalisation}
+    \item {Système de génération de règles de nat par nftables dévelopé}
+    \item {Génération de configuration BGP pour \href{https://github.com/FRRouting/frr.git}{FRR} et systèmes de rpc via gRPC et Websocket}
   \end{itemize}
 }
 
-\divider{}
-
-\cvevent{Timothé-rs}{Projet personnel}{Octobre 2021 -- Présent}{}{
-  \smallskip
-  \small{
-    Système de suivi d'emploi du temps pour avertir les elèves d'éventuels changements
-  }
-  \smallskip
-  \begin{itemize}
-      \item Utilisation de Rust pour le parsing de fichiers .ics
-      \item Déploiement dans Kubernetes au sein d'un cloud
-  \end{itemize}
-}
-
-\divider{}
-\cvevent{Kuizz}{Projet personnel}{Aout 2020 -- Présent}{}{
-  \smallskip
-  \small{
-    Application mobile présentant un flux infini de questions de culture générale.
-  }
-  \smallskip
-  \begin{itemize}
-      \item Utilisation de Flutter de gRPC et Rust pour un serveur de jeu
-      \item Découverte de la plateforme Google Play
-    \end{itemize}
+\cvevent{Lab EVPN proxmox}{Déploiement d'une infrastructure dual-stack basée sur l'evpn proxmox}{2023 - Actuel}{}{
+  Ces tests ont abouti par une contribution a Proxmox au niveau d'entregistement DNS dynamiques, ainsi qu'un report de bug au niveau de frr.
 }
 
 \clearpage
