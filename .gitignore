@@ -316,5 +316,4 @@ TSWLatexianTemp*
 #html/
 
 pdf/*
-cv.pdf
-!pdf/*.pdf
+!cv.pdf
