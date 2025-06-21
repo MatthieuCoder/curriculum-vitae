@@ -36,19 +36,19 @@
   \phone{(+262) 693 47 03 81}
   \homepage{\href{http://puffer.fish/~matthieu}{puffer.fish/\~{}matthieu}}
   \linkedin{\href{https://www.linkedin.com/in/mpgn/}{Matthieu Pignolet}}
-   \github{\href{http://github.com/MatthieuCoder}{@MatthieuCoder}}
+  \github{\href{http://github.com/MatthieuCoder}{@MatthieuCoder}}
 }
 
 \begin{fullwidth}
-\makecvheader
+\makecvheader{}
 \end{fullwidth}
 
 \cvsection[sidebar]{Expérience}
 
-\cvevent{Exodata}{Alternance durant un BUT R\&T}{Octobre 2023 - Octobre 2024}{}{
+\cvevent{Exodata}{Alternance durant un BUT R\&T}{Octobre 2023 --- Octobre 2025}{}{
   \begin{itemize}
     \item{Développement d'un framework python dans le cadre de systèmes de vérifications et de supervision}
-    \item{Développement de systèmes d'intégration continue et de tests continus}
+    \item{Développement de systèmes d'intégration continue et de tests quotidiens}
     \item{
      Développement de plusieurs systèmes de vérifications contenant au moins: \\
      \t  * Vérifications de conformité de la réplication dans le cadre de plans de reprise d'activité \\
@@ -56,35 +56,31 @@
      \t  * Vérifications de conformité au sein de plate-formes d'antivirus vendues aux clients
      }
     \item{Développement de système d'indéxation et de stockage de licenses au sein de l'ecosystème Microsoft pour assurer la visibilité}
-    \item{Mise en place d'infrastructure basées sur Ansible AWX}
-  \end{itemize}
-}
-
-\cvevent{Developer's House}{Projet associatif entre amis}{Aout 2019 -- Décembre 2022}{}{
-  \begin{itemize}
-    \item Mise en place de cluster Kubernetes sur bare-metal
-    \item Introduction aux technologies Cloud-native
-    \item Déploiement de stockage et de loadbalancing grâce à Cloudflare
-    \item Développement d'une plateforme d'authentification SSO
+    \item{Mise en place d'infrastructures basées sur Ansible AWX}
+    \item{Mise en place et gestion de tickets sur le plan opérationnel}
+    \item{Création de documentation et de procédures}
   \end{itemize}
 }
 
 \cvsection{Projets}
-
-\cvevent{Orion}{Solution de sd-wan open-source basée sur Wireguard et FRR (BGP)}{2020 - Actuel}{}{
+\cvevent{Lab EVPN Proxmox}{Déploiement d'une infrastructure dual-stack basée sur le SDN Proxmox}{2023 --- Actuel}{}{
   \begin{itemize}
-    \item {Système de ``SD-wan'' inter-étudiant utilisant BGP et Wireguard pour assurer une redondance}
-    \item{Mise en place de nombreux services disponibles au sein du réseau (Relais SIP, zones DNS publiques, serveurs SMTP avec relais)}
-    \item {Utilisation de la technologie de VPN Wireguard}
-    \item {Implémentation de techniques de hole-punching pour les liaisons derrière des NATs}
-    \item {Mise en place d'authentification par certificat (mTLS) au serveur de signalisation}
-    \item {Système de génération de règles de NAT par nftables développé}
-    \item {Génération de configuration BGP pour \href{https://github.com/FRRouting/frr.git}{FRR} et systèmes de rpc via gRPC et Websocket}
+    \item Mise en place d'infrastructure overlay / underlay (avec une infrastructure spine/leaf)
+    \item Application de VRFs Linux et intégration avec les namespace réseau Linux
+    \item Rapport de bugs et contribution faire a Proxmox
+    \item Intégration de stack et automatisation basée sur Ansible
+    \item Authentification et contrôle d'accès LDAP et Kerberos sur un stack opensource
+    \item Automatisation de backups et vérifications grâce a monitoring (Grafana, Loki, Prometheus, LibreNMS)
   \end{itemize}
 }
 
-\cvevent{Lab EVPN proxmox}{Déploiement d'une infrastructure dual-stack basée sur l'evpn proxmox}{2023 - Actuel}{}{
-  Ces tests ont abouti par une contribution a Proxmox au niveau d'entregistement DNS dynamiques, ainsi qu'un report de bug au niveau de FRR.
+
+\cvevent{Orion}{Solution de sd-wan inter-étudiant open-source basée sur Wireguard et FRR (BGP)}{2020 --- Actuel}{}{
+  \begin{itemize}
+    \item{Mise en place de nombreux services disponibles au sein du réseau (Relais SIP, zones DNS publiques, serveurs SMTP avec relais)}
+    \item {Implémentation de techniques de hole-punching pour les liaisons derrière des NATs}
+    \item {Mise en place d'authentification par certificat (mTLS) au serveur de signalisation}
+  \end{itemize}
 }
 
 \clearpage

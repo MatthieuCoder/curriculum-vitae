@@ -1,5 +1,5 @@
 cv.pdf: cv.tex
-	xelatex cv.tex
+	latexmk -pdf cv.tex
 
 .PHONY: clean
 clean:
